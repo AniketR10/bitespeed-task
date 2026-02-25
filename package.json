@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon --exec ts-node index.ts"
   },
   "repository": {
     "type": "git",
@@ -21,14 +22,14 @@
   },
   "homepage": "https://github.com/AniketR10/bitespeed-task#readme",
   "dependencies": {
+    "@neondatabase/serverless": "^1.0.2",
     "dotenv": "^17.3.1",
-    "express": "^5.2.1",
-    "pg": "^8.18.0"
+    "express": "^5.2.1"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/node": "^25.3.0",
-    "@types/pg": "^8.16.0",
+    "nodemon": "^3.1.14",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
